@@ -15,6 +15,48 @@ body {
     font-family: "Source Sans 3", sans-serif;
 }
 
+body {
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+    grid-template-areas:
+        ".... .... ...." 
+        ".... head ...."
+        ".... main ...."
+        ".... foot ...."
+        ".... .... ....";
+    gap: 1em 0;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "hero"
+        "one"
+        "two"
+        "three"     
+        "four" 
+        "five" 
+        "six"
+        "foot"; 
+}
+
+@media (min-width: 758px) {
+        main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "header header header"
+            "hero hero hero"
+            "one two three"
+            "four five six"
+            "city city city"
+            "foot foot foot"
+    } 
+}
+
+
 .headerEl {
     display: flex;
     padding: 0.75rem 1.25rem;
@@ -72,7 +114,8 @@ a {
 }
 
 .hero-post h2 {
-    line-height: 1;
+    line-height: 1.15;
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
 }
 
 a:hover, a:focus {
@@ -116,8 +159,12 @@ footer {
 }
 
 .blog {
+    display: block;
     width: 100%;
-    padding: 2em;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.25rem;
 }
 
 .more-element {
@@ -131,11 +178,56 @@ footer {
 
 
 .blog-content {
-    padding: 1rem 2rem;
+    padding: 1rem 1.25rem;
+}
+
+.blog-content article > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 0.75rem;
 }
 
 
 .blog-content p {
     color: #505050;
-    font-weight: ;
+}
+
+
+.headerEl {
+    grid-area: header;
+}
+
+.hero-post {
+    grid-area: hero;
+}
+
+
+.blog-one {
+    grid-area: one;
+}
+
+.blog-two {
+    grid-area: two;
+}
+
+
+.blog-three {
+    grid-area: three;
+}
+
+.blog-four {
+    grid-area: four;
+}
+
+.blog-five {
+    grid-area: five;
+}
+
+.blog-six {
+    grid-area: six;
+}
+
+footer {
+    grid-area: foot;
 }

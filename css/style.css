@@ -64,6 +64,15 @@ a {
     text-decoration: none;
     color: white;
     padding: 0.75rem 1rem;
+    align-items: flex-end;
+}
+
+.hero-post p {
+    font-weight: 400;
+}
+
+.hero-post h2 {
+    line-height: 1;
 }
 
 a:hover, a:focus {
@@ -103,9 +112,7 @@ footer {
     text-align: center;
     color: white;
     background-color: #202020;
-    height: 3rem;
-    width: auto;
-    padding: 2em 2em;
+    padding: 2rem 1rem;
 }
 
 .blog {
@@ -114,11 +121,21 @@ footer {
 }
 
 .more-element {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    font-weight: 800;
+    text-decoration: underline;
+    font-size: 1.5rem;
 }
 
-.blog-one,
-.blog-two,
-.blog-three {
-    
+
+.blog-content {
+    padding: 1rem 2rem;
+}
+
+
+.blog-content p {
+    color: #505050;
+    font-weight: ;
 }

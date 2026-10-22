@@ -37,6 +37,11 @@ body {
     .more-element {
         grid-column: 1 / -1;
     }
+
+    .hero-post header {
+        padding-bottom: 5rem;
+        width: 40%;
+    }
 }
 
 
@@ -178,32 +183,6 @@ footer {
 
 .hero-post {
     grid-area: hero;
-}
-
-
-.blog-one {
-    grid-area: one;
-}
-
-.blog-two {
-    grid-area: two;
-}
-
-
-.blog-three {
-    grid-area: three;
-}
-
-.blog-four {
-    grid-area: four;
-}
-
-.blog-five {
-    grid-area: five;
-}
-
-.blog-six {
-    grid-area: six;
 }
 
 footer {

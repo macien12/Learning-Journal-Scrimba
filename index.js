@@ -1,10 +1,5 @@
-const YearEl = document.getElementById('Footer-Year')
+const yearEl = document.getElementById('Footer-Year')
 
-function yearFooter() {
-const dateSnapshot = new Date()
+const currentYear = new Date().getFullYear()
 
-YearEl.innerHTML += `Copyright ${dateSnapshot.getFullYear().toString()}`
-
-}
-
-yearFooter()
+yearEl.textContent = `Copyright © ${currentYear}`

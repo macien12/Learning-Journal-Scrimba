@@ -11,11 +11,12 @@ body {
 
 .headerEl {
     display: flex;
-    padding: 1em 1em;
-    height: 10%;
+    padding: 0.75rem 1.25rem;
+    min-height: 59px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 1em;
+    
 }
 
 .headerEl h1 {
@@ -26,6 +27,58 @@ a {
     text-decoration: none;
 }
 
-a img {
-    background-size: 50% auto;
+
+.header-brand, .header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-brand {
+    gap: 0.25rem;
+}
+
+.header-brand img {
+    width: 1.5rem;
+    height: auto;
+}
+
+.hero-post {
+    display: block;
+    background-image: url("../images/blog-image-hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    padding: 0.75rem 1rem;
+}
+
+a:hover, a:focus {
+    filter: brightness(0.9);
+}
+
+a:focus {
+    outline: 3px solid #5a5a5a;
+    box-shadow: 0 0 0 3px rgba(135,18,113,0.5); 
+    transition: outline 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-post a:visited {
+  color: white;
+}
+
+a:visited {
+    color: #141414;
+}
+
+.hero-post h2 {
+    font-size: 3rem;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
 }

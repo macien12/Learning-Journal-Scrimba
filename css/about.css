@@ -15,20 +15,17 @@ body {
     font-family: "Source Sans 3", sans-serif;
 }
 
-.main-post h2 {
-    font-size: clamp(1.25rem, 3vw, 2rem);
-    line-height: 1.2;
+.main-text {
+    font-size: 0.9rem;
 }
 
-.main-post p {
-    font-size: 1rem;
-    line-height: 1.6;
+.hero-text h2 {
+    font-size: 2rem;
+    line-height: 1;
 }
 
-.main-post article > header > p:first-child {
-    font-size: 0.75rem;
-    font-weight: 600;
-}
+
+
 
 .main-element {
     display: grid;
@@ -44,14 +41,26 @@ body {
         margin-bottom: 4em;
     }
 
-    .blog-content {
-        width: 100%;
+    .about-intro {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
     }
 
-    .main-post header {
-    display: flex;
-    flex-direction: column-reverse;
-}
+    .avatar {
+        flex-shrink: 0;
+    }
+
+    .about-intro-text {
+        flex: 1;
+    }
+
+    .main-text {
+        font-size: 0.9rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 
 }
 
@@ -97,6 +106,7 @@ body {
     max-width: 65rem;
     margin-inline: auto;
     padding: 2rem 1.25rem;
+
 }
 
 .main-image {
@@ -114,8 +124,8 @@ body {
 
 .main-post article > header {
     display: flex;
-    flex-direction: column;
     gap: 0.75rem;
+    gap: 2rem;
 }
 
 a:hover, a:focus {
@@ -164,9 +174,16 @@ footer {
 }
 
 .avatar {
+    width: 6.5rem;
+    height: 6.5rem;
+    object-fit: cover;
     border-radius: 50%;
-    height: 10%;
-    width: 40%;
+}
+
+.about-intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 
@@ -190,4 +207,6 @@ footer {
 footer {
     grid-area: footer;
 }
+
+
 

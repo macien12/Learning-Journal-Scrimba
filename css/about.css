@@ -1,0 +1,193 @@
+*, *::before, *::after {
+    box-sizing: border-box;    
+}
+
+a,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.main-post h2 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    line-height: 1.2;
+}
+
+.main-post p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.main-post article > header > p:first-child {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.main-element {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: min(100% - 2.5rem, 65rem);
+    margin-inline: auto;
+}
+
+@media (min-width: 48rem) {
+    .main-element {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-bottom: 4em;
+    }
+
+    .blog-content {
+        width: 100%;
+    }
+
+    .main-post header {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+}
+
+
+.headerEl {
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    min-height: 59px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    background-color: #FFFFFF;
+    
+}
+
+.headerEl h1 {
+    font-size: 1.5rem;
+}
+
+
+
+
+.header-brand, .header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    gap: 1em;
+}
+
+.header-brand {
+    gap: 0.25rem;
+}
+
+.header-brand img {
+    width: 1.5rem;
+    height: auto;
+}
+
+.main-post {
+    width: 100%;
+    max-width: 65rem;
+    margin-inline: auto;
+    padding: 2rem 1.25rem;
+}
+
+.main-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+.main-post article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.main-post article > header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+a:hover, a:focus {
+    filter: brightness(0.9);
+}
+
+a:focus {
+    outline: 3px solid #5a5a5a;
+    box-shadow: 0 0 0 3px rgba(135,18,113,0.5); 
+    transition: outline 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-nav a,
+.header-nav a:visited {
+    color: #141414;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: #202020;
+    padding: 2rem 1rem;
+}
+
+.blog {
+    display: block;
+    width: 100%;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.recent-posts {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 10%;
+    width: 40%;
+}
+
+
+.blog-content article > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 0.75rem;
+}
+
+
+.blog-content p {
+    color: #505050;
+}
+
+
+.headerEl {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+

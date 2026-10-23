@@ -39,9 +39,9 @@ body {
     }
 
     .hero-post header {
-        padding-bottom: 5rem;
-        width: 40%;
+        max-width: 35rem;
     }
+    
 }
 
 
@@ -83,18 +83,26 @@ a {
 }
 
 .hero-post {
-    display: block;
-    background-image: url("../images/blog-image-hero.png");
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-height: 30rem;
+    padding: 2rem clamp(1.25rem, 5vw, 4rem);
+
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.7),
+            transparent 65%
+        ),
+        url("../images/blog-image-hero.png");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 30rem;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
     color: white;
-    padding: 0.75rem 1rem;
-    align-items: flex-end;
 }
 
 .hero-post p {

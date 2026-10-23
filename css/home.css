@@ -30,17 +30,17 @@ body {
 }
 
 @media (min-width: 48rem) {
+
+    .main-post {
+        padding: 3rem 4rem;
+    }
+
     .main-element {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .more-element {
-        grid-column: 1 / -1;
-    }
-
-    .hero-post header {
-        padding-bottom: 5rem;
-        width: 40%;
+    .blog {
+        
     }
 }
 
@@ -59,9 +59,7 @@ body {
     font-size: 1.5rem;
 }
 
-a {
-    text-decoration: none;
-}
+
 
 
 .header-brand, .header-nav {
@@ -83,31 +81,29 @@ a {
 }
 
 .main-post {
-    display: block;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 30rem;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    padding: 0.75rem 1rem;
-    align-items: flex-end;
+    width: 100%;
+    max-width: 65rem;
+    margin-inline: auto;
+    padding: 2rem 1.25rem;
 }
 
 .main-image {
-    width: 90%;
+    display: block;
+    width: 100%;
     height: auto;
+    border-radius: 0.25rem;
 }
 
-.hero-post p {
-    font-weight: 400;
+.main-post article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
-.hero-post h2 {
-    line-height: 1.15;
-    font-size: clamp(1.75rem, 6vw, 2.5rem);
+.main-post article > header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 a:hover, a:focus {
@@ -120,11 +116,6 @@ a:focus {
     transition: outline 0.2s ease, box-shadow 0.2s ease;
 }
 
-.hero-post,
-.hero-post:visited {
-    color: white;
-}
-
 .header-nav a,
 .header-nav a:visited {
     color: #141414;
@@ -134,8 +125,6 @@ h1, h2, h3, h4, p {
     margin: 0;
     padding: 0;
 }
-
-
 
 
 footer {
@@ -182,10 +171,6 @@ footer {
 
 .headerEl {
     grid-area: header;
-}
-
-.hero-post {
-    grid-area: hero;
 }
 
 footer {

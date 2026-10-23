@@ -23,6 +23,21 @@ body {
         "footer";
 }
 
+.main-post h2 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    line-height: 1.2;
+}
+
+.main-post p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.main-post article > header > p:first-child {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
 .main-element {
     display: grid;
     grid-template-columns: 1fr;
@@ -40,8 +55,18 @@ body {
     }
 
     .blog {
-        
+
     }
+
+    .blog-content {
+    padding: 1rem 1.25rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
 }
 
 
@@ -152,9 +177,7 @@ footer {
 }
 
 
-.blog-content {
-    padding: 1rem 1.25rem;
-}
+
 
 .blog-content article > div {
     display: flex;

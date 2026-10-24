@@ -6,11 +6,17 @@ yearEl.textContent = `Copyright © ${currentYear}`
 
 const viewMore = document.getElementById('view-more')
 
-const hiddenPost = document.getElementsByClassName('hidden-post')
+const hiddenPosts = document.querySelectorAll('.hidden-post')
 
 
-viewMore.addEventListener('click', function() {
-    hiddenPost.classList.remove('hidden')
+viewMore.addEventListener('click', function(e) {
+
+    e.preventDefault()
+
+    hiddenPosts.forEach(function(post) {
+        post.classList.remove('hidden')
+    })
+    viewMore.classList.add('hidden')
 })
 
-console.log(hiddenPost)
+console.log(hiddenPosts)
